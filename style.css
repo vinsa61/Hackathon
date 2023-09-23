@@ -13,28 +13,28 @@
     background-size: contain;
 }
 #header-home{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/beranda.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(beranda.png);
 }
 #header-car{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pcar.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-pcar.png);
 }
 #header-pjek{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pjek.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-pjek.png);
 }
 #header-pfood{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pfood.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-pfood.png);
 }
 #header-pmart{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pmart.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-pmart.png);
 }
 #header-tour{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-tour.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-tour.png);
 }
 #header-digiplan{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-digiplan.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-digiplan.png);
 }
 #header-pp{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pojokpeduli.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(header-pojokpeduli.png);
 }
 
 nav{
@@ -838,7 +838,7 @@ input[type=submit] {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(image/banner2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(banner2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: 10px;
