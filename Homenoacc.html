@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">  
+    <title>Pojok Jatirogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/c3e9afa8ed.js" crossorigin="anonymous"></script>
+</head> 
+<body> 
+<section class="header" id="header-home">
+        <nav>
+            <a><img src="image/logoheader.png" class="main"></a>
+            <div class="nav-links" id="navLinks">
+               <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Homenoacc.html">BERANDA</a></li>
+                    <li><a href="Pojokpedulinoacc.html">POJOK PEDULI</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+</section>
+<section class="news">
+    <h1>Berita</h1>
+    <div class="scroll-container">
+        <img src="image/pp1.jpg">
+        <img src="image/pp2.jpg">
+        <img src="image/pp3.jpg">
+        <img src="image/pp4.jpg">
+        <img src="image/pp5.jpg">
+        <img src="image/pp6.jpg">
+    </div>
+    <a class="hero-btn" href="Pojokpeduli.html"><h3>Berita Lainnya..</h3></a>
+</section>
+  <section class="product">
+      <h1>Produk Kami</h1>
+      <div class="row">
+          <div class="product-col"><a>
+              <img src="image/pjek.png">
+              <div class="layer">
+                  <h3>P-JEK</h3>
+              </div>
+          </a></div>
+          <div class="product-col"><a>
+              <img class= "tour" src="image/tour.png">
+              <div class="layer">
+                  <h3>TOUR</h3>
+              </div>
+          </a></div>
+          <div class="product-col"><a>
+              <img src="image/digiplan.png">
+              <div class="layer">
+                  <h3>DIGIPLAN</h3>
+              </div>
+          </a></div>
+      </div>
+<!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm1()">Masuk</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm1">
+    <form action="/action_page.php" class="form-container">
+      <h1>Masuk</h1>
+  
+      <label for="telp"><b>No Telpon</b></label>
+      <input type="text" placeholder="Masukkan Nomor Telpon" name="telp" required>
+      <label for="psw"><b>Kata Sandi</b></label>
+      <input type="password" placeholder="Masukkan Kata Sandi" name="psw" required>
+      <p>Belum punya akun? <button type="button" onclick="closeForm1(); openForm2()">Daftar</a></button>
+      <button type="submit" class="btn" id="redirectButton">Masuk</button>
+      <button type="button" class="btn cancel" onclick="closeForm1()">Tutup</button>
+    </form>
+  </div>
+  <!-- The form -->
+  <div class="form-popup" id="myForm2">
+    <form action="/action_page.php" class="form-container">
+      <h1>Daftar</h1>
+  
+      <label for="nama"><b>Nama</b></label>
+      <input type="text" placeholder="Masukkan Nama" name="nama" required>
+      <label for="telp"><b>No Telpon</b></label>
+      <input type="text" placeholder="Masukkan Nomor Telpon" name="telp" required>
+      <label for="psw"><b>Kata Sandi</b></label>
+      <input type="password" placeholder="Masukkan Kata Sandi" name="psw" required>
+      <p>Sudah punya akun? <button type="button" onclick="closeForm2(); openForm1()">Masuk</a></button>
+      <button type="submit" class="btn">Daftar</button>
+      <button type="button" class="btn cancel" onclick="closeForm2()">Tutup</button>
+    </form>
+  </div>
+  </section>
+  
+  <!----- Footer ----->
+  
+  <section class="footer">
+    <h4>Media Sosial</h4>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <p>Copyright © Tim Serenity 2023</p>
+</section>
+  
+  
+<!--------Javascript for Toogle Menu------->  
+<script>
+    
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+<script>
+    function openForm1() {
+  document.getElementById("myForm1").style.display = "block";
+}
+    function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+}
+
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
+}
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
+}
+document.getElementById("redirectButton").addEventListener("click", redirect);
+function redirect(){ window.location = "Home.html"; }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class='use-all-space'>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/c3e9afa8ed.js" crossorigin="anonymous"></script>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+    <meta charset='UTF-8'>
+    <title>Pojok Jatirogo</title>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css'>
+    <link rel='stylesheet' type='text/css' href='tomtom/assets/ui-library/index.css'/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox.css"
+    >
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.1.2-public-preview.15/services/services-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox-web.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    
+</head>
+<body>
+    <section class="header" id="header-pjek">
+        <nav>
+            <a href="Home.html"><img src="image/logoheader.png" class="main"></a>
+            <div class="nav-links" id="navLinks">
+               <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Home.html">BERANDA</a></li>
+                    <li><a href="Pjek.html">P-JEK</a></li>
+                    <li><a href="Tour.html">TOUR</a></li>
+                    <li><a href="Digiplan.html">DIGIPLAN</a></li>
+                    <li><a href="Pojokpeduli.html">POJOK PEDULI</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+</section>
+<div class="container">
+  <form action="action_page.php">
+    <div class="rows">
+      <div class="col-25">
+        <label for="jemput">Titik Jemput</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="jemput" name="jemput" placeholder="Titik Jemput..">
+      </div>
+    </div>
+    <div class="rows">
+      <div class="col-25">
+        <label for="tujuan">Titik Tujuan</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="tujuan" name="tujuan" placeholder="Titik Tujuan..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="ket-ride">Keterangan</label>
+      </div>
+      <div class="col-75">
+        <textarea id="ket-ride" name="ket-ride" placeholder="Keterangan.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="rows">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+      <section class="footer">
+        <h4>Media Sosial</h4>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-reddit"></i>
+        </div>
+        <p>Copyright © Tim Serenity 2023</p>
+    </section>
+    <script>
+    
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        
+    </script>
+</body>
+</html>

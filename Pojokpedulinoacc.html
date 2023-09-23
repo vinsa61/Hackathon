@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">  
+    <title>Pojok Jatirogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c3e9afa8ed.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head> 
+<body> 
+<section class="header" id="header-digiplan">
+        <nav>
+            <a><img src="image/pojokpeduli.png" class="main"></a>
+            <div class="nav-links" id="navLinks">
+               <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Homenoacc.html">BERANDA</a></li>
+                    <li><a href="Pojokpedulinoacc.html">POJOK PEDULI</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+</section>
+<section class="pp-box">
+    <h1>Berita</h1>
+    <center><div class="video-pp"><video src="image/ppvideo.mp4" controls></video></div></center>
+    <!-- Trigger the Modal -->
+    <h1>Donasi? Klik Disini.</h1>
+    <center><div class="qris-pp"><img id="myImg" src="image/qris.jpg" alt="Donasi" style="width:25%;max-width:300px;opacity: 100%;"></div></center>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    <div class="scroll-container">
+        <img src="image/pp1.jpg">
+        <img src="image/pp2.jpg">
+        <img src="image/pp3.jpg">
+        <img src="image/pp4.jpg">
+        <img src="image/pp5.jpg">
+        <img src="image/pp6.jpg">
+    </div>
+    <!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm1()">Masuk</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm1">
+  <form action="/action_page.php" class="form-container">
+    <h1>Masuk</h1>
+
+    <label for="telp"><b>No Telpon</b></label>
+    <input type="text" placeholder="Masukkan Nomor Telpon" name="telp" required>
+    <label for="psw"><b>Kata Sandi</b></label>
+    <input type="password" placeholder="Masukkan Kata Sandi" name="psw" required>
+    <p>Belum punya akun? <button type="button" onclick="closeForm1(); openForm2()">Daftar</a></button>
+    <button type="submit" class="btn" id="redirectButton">Masuk</button>
+    <button type="button" class="btn cancel" onclick="closeForm1()">Tutup</button>
+  </form>
+</div>
+<!-- The form -->
+<div class="form-popup" id="myForm2">
+  <form action="/action_page.php" class="form-container">
+    <h1>Daftar</h1>
+
+    <label for="nama"><b>Nama</b></label>
+    <input type="text" placeholder="Masukkan Nama" name="nama" required>
+    <label for="telp"><b>No Telpon</b></label>
+    <input type="text" placeholder="Masukkan Nomor Telpon" name="telp" required>
+    <label for="psw"><b>Kata Sandi</b></label>
+    <input type="password" placeholder="Masukkan Kata Sandi" name="psw" required>
+    <p>Sudah punya akun? <button type="button" onclick="closeForm2(); openForm1()">Masuk</a></button>
+    <button type="submit" class="btn">Daftar</button>
+    <button type="button" class="btn cancel" onclick="closeForm2()">Tutup</button>
+  </form>
+</div>
+</section>
+  <!----- Footer ----->
+  
+  <section class="footer">
+    <h4>Media Sosial</h4>
+    <div class="icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <p>Copyright © Tim Serenity 2023</p>
+</section>
+  
+  
+<!--------Javascript for Toogle Menu------->  
+<script>
+    
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+<script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<script>
+    function openForm1() {
+  document.getElementById("myForm1").style.display = "block";
+}
+    function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+}
+
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
+}
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
+}
+document.getElementById("redirectButton").addEventListener("click", redirect);
+function redirect(){ window.location = "Pojokpeduli.html"; }
+
+</script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,882 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #FF9B50; */
+}
+
+.header{
+    height: 80%;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+}
+#header-home{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/beranda.png);
+}
+#header-car{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pcar.png);
+}
+#header-pjek{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pjek.png);
+}
+#header-pfood{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pfood.png);
+}
+#header-pmart{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pmart.png);
+}
+#header-tour{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-tour.png);
+}
+#header-digiplan{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-digiplan.png);
+}
+#header-pp{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(image/header-pojokpeduli.png);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .main{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.logo-tour img{
+    width: 100%;
+    position: relative;
+}
+.tour-header{
+    width: 27vh;
+    margin: 21px;
+    position: relative;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #FFF;;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fas{
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fas{
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    /* -------P-MART-------- */
+
+    .row{
+        display: flex;
+    }
+    .row img{
+        width: 100%;
+        min-width: 80%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .eko{
+        margin: 2%;
+    }
+    .row textarea{
+        border: 1px solid black;
+    }
+
+}
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+div.scroll-container img {
+    padding: 10px;
+    height: 40vh;
+    width: auto;
+}
+.news h1{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+/*---- P-Jek ----*/
+
+.servis{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.row a{
+    text-decoration: none;
+    color: black;
+}
+.row p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row h3{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.row img{
+    width: 23%;
+    /* height: 70%; */
+}
+.servis-col{
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.trans-col{
+    flex-basis: 40%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.trans-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.servis-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+/* ------ Konfirmasi ------ */
+h2{
+    text-align: center;
+    margin-top: 2%;
+}
+
+/*------- product -------*/
+.product{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.product-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.product-col img{
+    width: 100%;
+    display: block;
+}
+.tour{
+    position: absolute;
+    top: 35%;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(171, 19, 19, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/*------- Food -------*/
+
+.food {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 100px;
+}
+.food-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.food-col img{
+    height: 31vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.menu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    max-height: 40vh;
+    max-width: 50%;
+    overflow: auto;
+    flex-basis: 40%;
+}
+.menu p{
+    margin-top: 2%;
+    font-size: 15px;
+}
+.hero-btn{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: gray;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    margin-right: 2%;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+@media(max-width: 700px){
+    .scroll{
+        display: block;
+    }
+}
+.hero-btn-mart{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid black;
+    padding: 4% 7%;
+    margin: 5%;
+    font-size: 12px;
+    background: #777;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.hero-btn-mart:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+/*------ footer -----*/
+
+.footer{
+    width: 100%;
+    text-align-last: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.footer-konfirmasi{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    text-align-last: center;
+    padding: 30px 0;
+}
+
+.footer-konfirmasi h4{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.icons .fab{
+    color: black;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-jedi{
+    color: red;
+}
+
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;   
+}
+.red-btn:hover{
+    color: white;
+}
+
+/* ----- Tour ----- */
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=number], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.submit-btn-mid{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------- DIGIPLAN ------ */
+.digiplan-desc{
+    width: 80%;
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    padding: 2% 3%;
+}
+.digiplan-desc p{
+    text-align: justify;
+}
+.digi-product{
+    width: 86%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.digi-scroll{
+    display: flex;
+    flex-direction: column;
+}
+.digi-paket{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.digi-box{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    margin-top: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 4%;
+}
+.digi-info{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%
+    ;
+    width: 80%;
+    padding: 3%;
+}
+.subm{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5%;
+}
+@media(max-width: 700px){
+    .digi-product{
+        display: block;
+    }
+    .digi-scroll{
+        display: block;
+    }
+    .digi-paket{
+        display: block;
+    }
+}
+
+/* --------- POJOK PEDULI ------------- */
+.pp-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.pp-box h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.video-pp{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+video{
+    width: 100%;
+}
+@media(max-width: 700px){
+    .video-pp{
+        width: 70%;
+    }
+    .qris-pp{
+        width: 100%;
+    }
+}
+
+/* -------FORM WITH BUTTON------- */
+
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #f44336;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Style the container */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.container-form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.col-form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+  
+  /* Clear floats after the columns */
+  .rows:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+        .col-25, .col-75, input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+.select{
+    margin-top: 2%;
+}
+.select-btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.select-btn .btn-text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.select-btn .arrow-dwn{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #f44336;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg);
+}
+.list-items{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.select-btn.open ~ .list-items{
+    display: block;
+}
+.list-items .item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+.list-items .item:hover{
+    background-color: #e7edfe;
+}
+.item .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+    background-color: #f44336;
+    border-color: #f44336;
+}
+.checkbox .check-icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+    transform: scale(1);
+}
+
+/* ------------------ POPUP QRIS ------------------ */
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 2%;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+/* --------- LOGIN FORM --------- */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*----- call to action -----*/
+
+.cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(image/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{
+        font-size: 11px;
+    }
+    .hero-btn{
+        font-size: 9px;
+        padding: 4% 7%;
+        margin: 1%;
+    }
+    .tour{
+        position: relative;
+    }
+    .product-col img{
+        width: 80%;
+    }
+    .header{
+        background-size: cover;
+    }
+}

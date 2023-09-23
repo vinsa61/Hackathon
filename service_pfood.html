@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">  
+    <title>Pojok Jatirogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c3e9afa8ed.js" crossorigin="anonymous"></script>
+</head> 
+<body> 
+<section class="header" id="header-pfood">
+    <nav>
+        <a href="Home.html"><img src="image/logoheaderpjek.png" class="main"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="Home.html">BERANDA</a></li>
+                <li><a href="Pjek.html">P-JEK</a></li>
+                <li><a href="Tour.html">TOUR</a></li>
+                <li><a href="Digiplan.html">DIGIPLAN</a></li>
+                <li><a href="Pojokpeduli.html">POJOK PEDULI</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+<section class="food">
+    <div class="row">
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/naspeng.jpeg"></a>
+            <h3>Restoran Nasi Tumpeng A</h3>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/kepiting.jpg">
+            <h3>Restoran Kepiting Sidoarjo</h3></a>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/geprek.png">
+            <h3>Warung Geprek Makan Angin</h3></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/mie.jpeg">
+            <h3>Warmindo</h3></a>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/rendang.jpeg">
+            <h3>Rumah Makan Rendang khas Padang</h3></a>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/sate.jpg">
+            <h3>Sate Kacang Pagalaran</h3></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/naspeng.jpeg">
+            <h3>Restoran Nasi Tumpeng A</h3></a>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/kepiting.jpg">
+            <h3>Restoran Kepiting Sidoarjo</h3></a>
+        </div>
+        <div class="food-col">
+            <a href="prototype-food.html"><img src="image/geprek.png">
+            <h3>Warung Geprek Makan Angin</h3></a>
+       </div>
+    </div>
+</section>
+  
+  <!----- Footer ----->
+  
+  <section class="footer">
+      <h4>Media Sosial</h4>
+      <div class="icons">
+                  <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+      <p>Copyright © Tim Serenity 2023</p>
+  </section>
+  <script>
+    
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    
+</script>
+    
+</body>
+</html>

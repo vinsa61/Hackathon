@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class='use-all-space'>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/c3e9afa8ed.js" crossorigin="anonymous"></script>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+    <meta charset='UTF-8'>
+    <title>Pojok Jatirogo</title>
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css'>
+    <link rel='stylesheet' type='text/css' href='tomtom/assets/ui-library/index.css'/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox.css"
+    >
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.1.2-public-preview.15/services/services-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.3-public-preview.0/SearchBox-web.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    
+</head>
+<body>
+    <section class="header" id="header-car">
+        <nav>
+            <a href="Home.html"><img src="image/logoheaderpjek.png" class="main"></a>
+            <div class="nav-links" id="navLinks">
+               <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Home.html">BERANDA</a></li>
+                    <li><a href="Pjek.html">P-JEK</a></li>
+                    <li><a href="Tour.html">TOUR</a></li>
+                    <li><a href="Digiplan.html">DIGIPLAN</a></li>
+                    <li><a href="Pojokpeduli.html">POJOK PEDULI</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+</section>
+<div class="container">
+    <form action="action_page.php">
+      <div class="rows">
+        <div class="col-25">
+          <label for="jemput">Titik Jemput</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="jemput" name="jemput" placeholder="Titik Jemput..">
+        </div>
+      </div>
+      <div class="rows">
+        <div class="col-25">
+          <label for="tujuan">Titik Tujuan</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="tujuan" name="tujuan" placeholder="Titik Tujuan..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="ket-ride">Keterangan</label>
+        </div>
+        <div class="col-75">
+          <textarea id="ket-ride" name="ket-ride" placeholder="Keterangan.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="rows">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+<!-- <p id="Lat"></p>
+<p id="Long"></p>
+<p id="Lat2"></p>
+<p id="Long2"></p>
+Address:
+    <input type="text" id="address-input">
+    <input type="text" id="address2-input">
+    <input type="submit" id="submit" value="generate" onClick="getLatLongFromAddress()">
+<script>
+    function getLatLongFromAddress() {
+    const addressInput = document.getElementById('address-input').value;
+    const address2Input = document.getElementById('address2-input').value;
+    const apiUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${addressInput}`;
+    const api2Url = `https://nominatim.openstreetmap.org/search?format=json&q=${address2Input}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                const location = data[0];
+                const latitude1 = location.lat;
+                const longitude1 = location.lon;
+                const element1 = document.getElementById("Lat");
+                const element2 = document.getElementById("Long");
+                element1.innerHTML = latitude1;
+                element2.innerHTML = longitude1;
+                console.log(`Latitude: ${latitude1}, Longitude: ${longitude1}`);
+            } else {
+                console.log('Invalid address. Please try again.');
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+        fetch(api2Url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                const location = data[0];
+                const latitude2 = location.lat;
+                const longitude2 = location.lon;
+                const element3 = document.getElementById("Lat2");
+                const element4 = document.getElementById("Long2");
+                element3.innerHTML = latitude2;
+                element4.innerHTML = longitude2;
+                console.log(`Latitude: ${latitude2}, Longitude: ${longitude2}`);
+            } else {
+                console.log('Invalid address. Please try again.');
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+    </script> -->
+    <p id="dis"></p>
+      <section class="footer">
+        <h4>Media Sosial</h4>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <p>Copyright © Tim Serenity 2023</p>
+    </section>
+    <script>
+    
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        
+    </script>
+    <!-- <script>
+    
+    function calculateDistance(latitude1, longitude1, latitude2, longitude2) {
+        const R = 6371; // metres
+        const φ1 = latitude1 * Math.PI/180; // φ, λ in radians
+        const φ2 = latitude2 * Math.PI/180;
+        const Δφ = (latitude2-latitude1) * Math.PI/180;
+        const Δλ = (longitude2-longitude1) * Math.PI/180;
+
+        const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+          Math.cos(φ1) * Math.cos(φ2) *
+          Math.sin(Δλ/2) * Math.sin(Δλ/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        const d = R * c; // in metres
+        return d;
+} 
+dis = document.getElementById("dis");
+dis.innerHTML=calculateDistance();
+
+    </script> -->
+</body>
+</html>
